@@ -1,0 +1,55 @@
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	.container__letters,
+	.container__booksNumbers,
+	.container__addData,
+	.container__numbers {
+		width: 50vw;
+		min-height: 43vh;
+		font-weight: bold;
+	}
+	.container__numbers,
+	.container__booksNumbers {
+		color: white;
+	}
+	.container__numbers,
+	.container__booksNumbers,
+	.container__letters {
+		padding-top: 7vh;
+		text-align: center;
+		.container-items
+		{
+			padding: 1vh 1vh;
+		}
+		.item {
+			padding-top:0.5vh;
+			padding-bottom: 0.5vh;
+		}
+	}
+	.container__sort {
+		position: absolute;
+		right: 0;
+		top: 0;
+		span {
+			font-size: 14px;
+		}
+	}
+	.container__addData {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.container__addData__input {
+			width: 40%;
+		}
+	}
+	.container__letters {
+		background-color: #ffe5b4;
+	}
+	.container__numbers {
+		background-color: #8b00ff;
+	}
+	.container__booksNumbers {
+		background-color: black;
+	}
+}
