@@ -1,19 +1,19 @@
-import React from 'react';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function Letters({ letters, checked }) {
-	const renderLetters = [ ...letters ];
+	const renderLetters = [ ...letters ]
 	if (checked) {
-		renderLetters.sort((a, b) => (a.item.toLowerCase() > b.item.toLowerCase() ? 1 : -1));
+		renderLetters.sort((a, b) => (a.item.toLowerCase() > b.item.toLowerCase() ? 1 : -1))
 	} else {
-		renderLetters.sort((a, b) => (a.data < b.data ? 1 : -1));
+		renderLetters.sort((a, b) => (a.data < b.data ? 1 : -1))
 	}
-
 	return (
 		<div className="container__letters">
 			<h3 className="tittle">Буквы</h3>
 			<div className="container-items">
 				{renderLetters.map((letter) => (
-					<div className="item" key={letter.data}>
+					<div className="item" key={letter.date}>
 						{letter.item}
 						{letter.count > 1 ? (
 							<span>
@@ -26,5 +26,10 @@ export default function Letters({ letters, checked }) {
 				))}
 			</div>
 		</div>
-	);
+	)
+}
+
+Letters.propTypes = {
+	letters: PropTypes.array,
+	checked: PropTypes.bool
 }
