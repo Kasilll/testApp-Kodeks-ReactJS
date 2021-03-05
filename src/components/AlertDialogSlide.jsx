@@ -11,12 +11,11 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function AlertDialogSlide({open, setOpen}) {
-  
-
-//   const handleClickOpen = () => {
-//     setOpen(true);
-//   };
+export default function AlertDialogSlide({ open, setOpen }) {
+  // FIXME: ненужный код лучше удалить
+  //   const handleClickOpen = () => {
+  //     setOpen(true);
+  //   };
 
   const handleClose = () => {
     setOpen(false);
@@ -35,11 +34,10 @@ export default function AlertDialogSlide({open, setOpen}) {
         aria-labelledby="alert-dialog-slide-title"
         aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle id="alert-dialog-slide-title">{"Ты ввел не те данные, которые нужно... :("}</DialogTitle>
+        <DialogTitle id="alert-dialog-slide-title">{'Ты ввел не те данные, которые нужно... :('}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
-            Введите пожалуйста одно слово или число, либо число + слово.
-            Тогда все будет OK ;)
+            Введите пожалуйста одно слово или число, либо число + слово. Тогда все будет OK ;)
           </DialogContentText>
         </DialogContent>
         <DialogActions>
