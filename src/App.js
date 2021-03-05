@@ -1,6 +1,6 @@
 import './App.scss'
 import React from 'react'
-import { Letters, LettersNumbers, Input, Numbers, ToggleSwitch, AlertDialogSlide } from './components'
+import { Letters, LettersNumbers, InputData, Numbers, ToggleSwitch, AlertDialogSlide } from './components'
 
 function App() {
 	const [ letters, setLetters ] = React.useState([]) // массив букв
@@ -24,7 +24,7 @@ function App() {
 				checked={checked}
 				setChecked={setChecked}
 			/>
-			<Input
+			<InputData
 				setLetters={setLetters}
 				letters={letters}
 				lettersNumbers={lettersNumbers}

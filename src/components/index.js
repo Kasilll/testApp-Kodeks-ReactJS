@@ -1,6 +1,6 @@
 export { default as Letters } from './Letters'
 export { default as LettersNumbers } from './LettersNumbers'
-export { default as Input } from './Input'
+export { default as InputData } from './InputData'
 export { default as Numbers } from './Numbers'
 export { default as ToggleSwitch } from './ToggleSwitch'
 export { default as AlertDialogSlide } from './AlertDialogSlide'

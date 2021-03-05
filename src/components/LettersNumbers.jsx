@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export default function LettersNumbers({ lettersNumbers, checked }) {
 	const renderNumbers = [ ...lettersNumbers ]
 	if (!checked) {
-		renderNumbers.sort((a, b) => (a.data < b.data ? 1 : -1))
+		renderNumbers.sort((a, b) => (a.date < b.date ? 1 : -1))
 	}
 	return (
 		<div className="container__booksNumbers">

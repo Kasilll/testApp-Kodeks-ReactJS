@@ -2,11 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function Letters({ letters, checked }) {
+	console.log(letters)
 	const renderLetters = [ ...letters ]
 	if (checked) {
 		renderLetters.sort((a, b) => (a.item.toLowerCase() > b.item.toLowerCase() ? 1 : -1))
 	} else {
-		renderLetters.sort((a, b) => (a.data < b.data ? 1 : -1))
+		renderLetters.sort((a, b) => (a.date < b.date ? 1 : -1))
 	}
 	return (
 		<div className="container__letters">

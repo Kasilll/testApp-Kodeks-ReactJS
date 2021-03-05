@@ -6,7 +6,7 @@ export default function Numbers({ numbers, checked }) {
 	if (checked) {
 		renderNumbers.sort((a, b) => (Number(a.item) > Number(b.item) ? 1 : -1))
 	} else {
-		renderNumbers.sort((a, b) => (a.data < b.data ? 1 : -1))
+		renderNumbers.sort((a, b) => (a.date < b.date ? 1 : -1))
 	}
 	return (
 		<div className="container__numbers">
