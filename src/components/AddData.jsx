@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input } from '@material-ui/core';
 
-export default function AddData({ setLetters, setLettersNumbers, setNumbers, numbers, lettersNumbers, letters }) {
+export default function AddData({ setLetters, setLettersNumbers, setNumbers, numbers, lettersNumbers, letters, setOpen }) {
 	const [ value, setValue ] = React.useState('');
 	function checkRepeatCount(arr, value) {
 		// функция проверяющая повторяющиеся элементы
@@ -70,7 +70,7 @@ export default function AddData({ setLetters, setLettersNumbers, setNumbers, num
 				setNumbers((prev) => [ ...prev, newItem ]);
 			}
 		} else {
-			alert('Введенное значение должно быть или числом или строкой');
+			setOpen(true);
 		}
 	}
 	function handlerChangeInput(e) {
@@ -83,7 +83,7 @@ export default function AddData({ setLetters, setLettersNumbers, setNumbers, num
 			setValue('');
 		}
 		if(e.key === 'Enter' && e.target.value == '') {
-			alert ('Введите слово или число')
+			setOpen(true);
 		}
 	}
 	return (

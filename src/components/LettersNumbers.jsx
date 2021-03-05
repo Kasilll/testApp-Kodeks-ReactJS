@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export default function LettersNumbers({ lettersNumbers, checked }) {
 	const renderNumbers = [ ...lettersNumbers ];
 	if (!checked) {
